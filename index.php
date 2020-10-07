@@ -6,13 +6,23 @@
   </head>
   <body>
 
-
+<h2> BINARY </h2><br><br>
 <label for="code">Enter your message here</label><br>
 <textarea type="text" id="msgToCode" value=""></textarea><br>
 <input type="submit" value="convert" id="convert"><br><br>
 
 <p>The binary code is :</p>
 <p id="crypted"></p>
+
+<h2> MORSE </h2><br><br>
+<label>Enter your message here</label><br>
+<textarea type="text" id="msgToMorse" value=""></textarea><br>
+<input type="submit" value="convert" id="toMorse"><br><br>
+
+<p>The morse code is :</p>
+<p id="msgInMorse" style="font-size: 25px;"></p>
+
+
 
 
 
