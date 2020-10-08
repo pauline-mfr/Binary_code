@@ -11,7 +11,7 @@
 <textarea type="text" id="msgToCode" value=""></textarea><br>
 <input type="submit" value="convert" id="convert"><br><br>
 
-<p>The binary code is :</p>
+<p>Binary code :</p>
 <p id="crypted"></p>
 
 <h2> MORSE </h2><br><br>
@@ -19,9 +19,17 @@
 <textarea type="text" id="msgToMorse" value=""></textarea><br>
 <input type="submit" value="convert" id="toMorse"><br><br>
 
-<p>The morse code is :</p>
+<p>Morse code :</p>
 <p id="msgInMorse" style="font-size: 25px;"></p>
 
+
+<h2> BETAMAZE </h2><br><br>
+<label>Enter your message here</label><br>
+<textarea type="text" id="msgToBeta" value=""></textarea><br>
+<input type="submit" value="convert" id="toBeta"><br><br>
+
+<p>Betamaze code :</p>
+<p id="msgInBeta"></p>
 
 
 
