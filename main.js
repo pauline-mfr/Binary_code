@@ -31,7 +31,6 @@ document.getElementById("toMorse").addEventListener("click", function(){
   }
   let output =  coded.map(arr => arr.join('')).join(' ') //coded.join(' ');
   // output a string
-  console.log(output);
   document.getElementById('msgInMorse').innerHTML = output;
 });
 
@@ -57,7 +56,6 @@ document.getElementById("toBeta").addEventListener("click", function(){
   }
   let output =  coded.map(arr => arr.join('')).join('<img src="img/space.png">');
   // output a string
-  console.log(output);
   document.getElementById('msgInBeta').innerHTML = output;
 });
 
@@ -68,20 +66,14 @@ document.getElementById("toColor").addEventListener("click", function(){
   const COLOR_CODE = {'1': '<div style="height: 50px; width: 50px; background-color: red; margin: 5px;"></div>', '2': '<div style="height: 50px; width: 50px; background-color: yellow; margin: 5px;"></div>', '3': '<div style="height: 50px; width: 50px; background-color: green; margin: 5px;"></div>', '4': '<div style="height: 50px; width: 50px; background-color: blue; margin: 5px;"></div>', '5': '<div style="height: 50px; width: 50px; background-color: black; margin: 5px;"></div>', '6': '<div style="height: 50px; width: 50px; background-color: Orchid; margin: 5px;"></div>', '7': '<div style="height: 50px; width: 50px; background-color: grey; margin: 5px;"></div>', '8': '<div style="height: 50px; width: 50px; background-color: orange; margin: 5px;"></div>', '9': '<div style="height: 50px; width: 50px; background-color: Crimson; margin: 5px;"></div>', '0': '<div style="height: 50px; width: 50px; background-color: white; margin: 5px; border: 1px solid black;"></div>'};
 
   let toCode = document.getElementById('nbToColor').value;
-  var words = toCode.split(' '); // split each word
+  var number = toCode.split(''); // split each number
   var coded = [];
-  for(var w = 0; w < words.length; w++) { // browse each word
-    coded[w] = []; // stock each one of them
-    let letters = words[w].split(''); // split every character
-    for(var i = 0; i < letters.length; i++){ // browse each character
-      coded[w][i] = [];
-      if(COLOR_CODE[letters[i]]){ // get the morse equivalent
-        coded[w][i].push( COLOR_CODE[letters[i]] );
+  for(var i = 0; i < number.length; i++) { // browse each number
+    coded[i] = []; // stock each one of them
+      if(COLOR_CODE[number[i]]){ // get the morse equivalent
+        coded[i].push( COLOR_CODE[number[i]] );
       }
     }
-  }
-  let output =  coded.map(arr => arr.join('')).join('');
-  // output a string
-  console.log(output);
+  let output =  coded.join('');
   document.getElementById('nbInColor').innerHTML = output;
 });
