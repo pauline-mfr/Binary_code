@@ -6,7 +6,7 @@ document.getElementById("convert").addEventListener("click", function() {
   for (var i = 0; i < code.length; i++) {
     console.log(Number(code.charCodeAt(i)).toString(2));
     crypted.push((Number(code.charCodeAt(i)).toString(2)));
-    document.getElementById('crypted').innerHTML = crypted;
+    document.getElementById('crypted').innerHTML = crypted.join(' ');
   }
 });
 
